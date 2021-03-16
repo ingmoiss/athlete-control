@@ -20,7 +20,7 @@ public class VentanaFutbolista extends javax.swing.JFrame {
         initComponents();
         
         this.setLocationRelativeTo(null);
-        this.setMinimumSize(new Dimension(400, 400));
+        this.setMinimumSize(new Dimension(400, 315));
 
     }
 
@@ -34,33 +34,132 @@ public class VentanaFutbolista extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        etiquetaTitulo = new javax.swing.JLabel();
+        etiquetaIdentificacion = new javax.swing.JLabel();
+        cajaIdentificacion = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        cajaNombre = new javax.swing.JTextField();
+        etiquetaFecha = new javax.swing.JLabel();
+        spinnerFecha = new javax.swing.JSpinner();
+        etiquetaEdad = new javax.swing.JLabel();
+        cajaEdad = new javax.swing.JTextField();
+        etiquetaEstatura = new javax.swing.JLabel();
+        cajaEstatura = new javax.swing.JTextField();
+        etiquetaPeso = new javax.swing.JLabel();
+        cajaPeso = new javax.swing.JTextField();
+        etiquetaSangre = new javax.swing.JLabel();
+        comboTipo = new javax.swing.JComboBox<>();
+        botonAtras = new javax.swing.JButton();
+        etiquetaPie = new javax.swing.JLabel();
+        cajaPosicion = new javax.swing.JTextField();
+        etiquetaPosicion = new javax.swing.JLabel();
+        cajaPie1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Futbolista");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 399, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
+        jPanel1.setPreferredSize(new java.awt.Dimension(400, 400));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        etiquetaTitulo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        etiquetaTitulo.setText("Registrando Fustbolista");
+        jPanel1.add(etiquetaTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, -1, -1));
+
+        etiquetaIdentificacion.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        etiquetaIdentificacion.setText("Identificación");
+        jPanel1.add(etiquetaIdentificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
+
+        cajaIdentificacion.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jPanel1.add(cajaIdentificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 380, -1));
+
+        jLabel1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel1.setText("Nombre Completo");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, -1));
+
+        cajaNombre.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jPanel1.add(cajaNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 380, -1));
+
+        etiquetaFecha.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        etiquetaFecha.setText("Fecha de Nacimiento");
+        jPanel1.add(etiquetaFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
+
+        spinnerFecha.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        spinnerFecha.setModel(new javax.swing.SpinnerDateModel());
+        spinnerFecha.setEditor(new javax.swing.JSpinner.DateEditor(spinnerFecha, "dd-MM-yyyy"));
+        jPanel1.add(spinnerFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 250, -1));
+
+        etiquetaEdad.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        etiquetaEdad.setText("Edad");
+        jPanel1.add(etiquetaEdad, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 160, -1, -1));
+
+        cajaEdad.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jPanel1.add(cajaEdad, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, 110, -1));
+
+        etiquetaEstatura.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        etiquetaEstatura.setText("Estatura");
+        jPanel1.add(etiquetaEstatura, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, -1));
+
+        cajaEstatura.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jPanel1.add(cajaEstatura, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 120, -1));
+
+        etiquetaPeso.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        etiquetaPeso.setText("Peso");
+        jPanel1.add(etiquetaPeso, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, -1, -1));
+
+        cajaPeso.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jPanel1.add(cajaPeso, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 240, 120, -1));
+
+        etiquetaSangre.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        etiquetaSangre.setText("Tipo de Sangre");
+        jPanel1.add(etiquetaSangre, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 220, -1, -1));
+
+        comboTipo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        comboTipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tipo", "O-", "O+", "A-", "A+", "B-", "B+", "AB-", "AB+" }));
+        jPanel1.add(comboTipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, 120, -1));
+
+        botonAtras.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        botonAtras.setText("Atras");
+        botonAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonAtrasActionPerformed(evt);
+            }
+        });
+        jPanel1.add(botonAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 340, 90, 30));
+
+        etiquetaPie.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        etiquetaPie.setText("Pie Dominante");
+        jPanel1.add(etiquetaPie, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, -1, -1));
+
+        cajaPosicion.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jPanel1.add(cajaPosicion, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 300, 180, -1));
+
+        etiquetaPosicion.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        etiquetaPosicion.setText("Posición de Campo");
+        jPanel1.add(etiquetaPosicion, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 280, -1, -1));
+
+        cajaPie1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jPanel1.add(cajaPie1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 180, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAtrasActionPerformed
+        VentanaInicio ventana = new VentanaInicio();
+        ventana.setVisible(true);
+        
+        dispose();
+    }//GEN-LAST:event_botonAtrasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -98,6 +197,26 @@ public class VentanaFutbolista extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonAtras;
+    private javax.swing.JTextField cajaEdad;
+    private javax.swing.JTextField cajaEstatura;
+    private javax.swing.JTextField cajaIdentificacion;
+    private javax.swing.JTextField cajaNombre;
+    private javax.swing.JTextField cajaPeso;
+    private javax.swing.JTextField cajaPie1;
+    private javax.swing.JTextField cajaPosicion;
+    private javax.swing.JComboBox<String> comboTipo;
+    private javax.swing.JLabel etiquetaEdad;
+    private javax.swing.JLabel etiquetaEstatura;
+    private javax.swing.JLabel etiquetaFecha;
+    private javax.swing.JLabel etiquetaIdentificacion;
+    private javax.swing.JLabel etiquetaPeso;
+    private javax.swing.JLabel etiquetaPie;
+    private javax.swing.JLabel etiquetaPosicion;
+    private javax.swing.JLabel etiquetaSangre;
+    private javax.swing.JLabel etiquetaTitulo;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JSpinner spinnerFecha;
     // End of variables declaration//GEN-END:variables
 }

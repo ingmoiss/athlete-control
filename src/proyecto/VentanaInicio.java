@@ -17,7 +17,7 @@ public class VentanaInicio extends javax.swing.JFrame {
         initComponents();
         
         this.setLocationRelativeTo(null);
-        this.setMinimumSize(new Dimension(400, 220));
+        this.setMinimumSize(new Dimension(240, 185));
     }
 
     /**
@@ -37,13 +37,14 @@ public class VentanaInicio extends javax.swing.JFrame {
         botonBaskebolista = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Inicio");
 
         jPanel1.setPreferredSize(new java.awt.Dimension(400, 400));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         etiquetaTitulo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         etiquetaTitulo.setText("Registro de atletas");
-        jPanel1.add(etiquetaTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, -1, -1));
+        jPanel1.add(etiquetaTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
 
         botonSalir.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         botonSalir.setText("Salir");
@@ -52,7 +53,7 @@ public class VentanaInicio extends javax.swing.JFrame {
                 botonSalirActionPerformed(evt);
             }
         });
-        jPanel1.add(botonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, 90, -1));
+        jPanel1.add(botonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 90, -1));
 
         botonFutbolista.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         botonFutbolista.setText("Registar Futbolista");
@@ -61,25 +62,25 @@ public class VentanaInicio extends javax.swing.JFrame {
                 botonFutbolistaActionPerformed(evt);
             }
         });
-        jPanel1.add(botonFutbolista, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 90, 220, -1));
+        jPanel1.add(botonFutbolista, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 220, -1));
 
         botonKarateka.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         botonKarateka.setText("Registar Karateka");
-        jPanel1.add(botonKarateka, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 220, -1));
+        jPanel1.add(botonKarateka, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 220, -1));
 
         botonBaskebolista.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         botonBaskebolista.setText("Registar Baskelolista");
-        jPanel1.add(botonBaskebolista, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, 220, -1));
+        jPanel1.add(botonBaskebolista, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 220, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
