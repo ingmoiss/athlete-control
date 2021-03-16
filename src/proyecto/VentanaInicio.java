@@ -70,6 +70,11 @@ public class VentanaInicio extends javax.swing.JFrame {
 
         botonBaskebolista.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         botonBaskebolista.setText("Registar Baskelolista");
+        botonBaskebolista.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonBaskebolistaActionPerformed(evt);
+            }
+        });
         jPanel1.add(botonBaskebolista, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 220, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -96,6 +101,13 @@ public class VentanaInicio extends javax.swing.JFrame {
         
         dispose();
     }//GEN-LAST:event_botonFutbolistaActionPerformed
+
+    private void botonBaskebolistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBaskebolistaActionPerformed
+        VentanaBasketbolista ventana = new VentanaBasketbolista();
+        ventana.setVisible(true);
+        
+        dispose();
+    }//GEN-LAST:event_botonBaskebolistaActionPerformed
 
     /**
      * @param args the command line arguments
