@@ -66,6 +66,11 @@ public class VentanaInicio extends javax.swing.JFrame {
 
         botonKarateka.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         botonKarateka.setText("Registar Karateka");
+        botonKarateka.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonKaratekaActionPerformed(evt);
+            }
+        });
         jPanel1.add(botonKarateka, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 220, -1));
 
         botonBaskebolista.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -108,6 +113,13 @@ public class VentanaInicio extends javax.swing.JFrame {
         
         dispose();
     }//GEN-LAST:event_botonBaskebolistaActionPerformed
+
+    private void botonKaratekaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonKaratekaActionPerformed
+        VentanaKarateka ventana = new VentanaKarateka();
+        ventana.setVisible(true);
+        
+        dispose();
+    }//GEN-LAST:event_botonKaratekaActionPerformed
 
     /**
      * @param args the command line arguments

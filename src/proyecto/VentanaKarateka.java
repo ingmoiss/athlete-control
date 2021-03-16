@@ -11,16 +11,16 @@ import java.awt.Dimension;
  *
  * @author Moisés Navarro
  */
-public class VentanaBasketbolista extends javax.swing.JFrame {
+public class VentanaKarateka extends javax.swing.JFrame {
 
     /**
-     * Creates new form VentanaBasketbolista
+     * Creates new form VentanaKarateka
      */
-    public VentanaBasketbolista() {
+    public VentanaKarateka() {
         initComponents();
         
         this.setLocationRelativeTo(null);
-        this.setMinimumSize(new Dimension(400, 380));
+        this.setMinimumSize(new Dimension(400, 400));
     }
 
     /**
@@ -35,6 +35,7 @@ public class VentanaBasketbolista extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         etiquetaTitulo = new javax.swing.JLabel();
         etiquetaIdentificacion = new javax.swing.JLabel();
+        botonAtras = new javax.swing.JButton();
         cajaIdentificacion = new javax.swing.JTextField();
         etiquetaNombre = new javax.swing.JLabel();
         cajaNombre = new javax.swing.JTextField();
@@ -42,29 +43,37 @@ public class VentanaBasketbolista extends javax.swing.JFrame {
         spinnerFecha = new javax.swing.JSpinner();
         cajaEdad = new javax.swing.JTextField();
         etiquetaEdad = new javax.swing.JLabel();
+        etiquetaEstatura = new javax.swing.JLabel();
+        cajaEstatura = new javax.swing.JTextField();
         cajaPeso = new javax.swing.JTextField();
         etiquetaPeso = new javax.swing.JLabel();
-        cajaEstatura = new javax.swing.JTextField();
-        etiquetaEstatura = new javax.swing.JLabel();
         comboTipo = new javax.swing.JComboBox<>();
         etiquetaSangre = new javax.swing.JLabel();
         etiquetaPromedio = new javax.swing.JLabel();
         cajaPromedio = new javax.swing.JTextField();
-        botonAtras = new javax.swing.JButton();
-        botonCancelar = new javax.swing.JButton();
         botonGuardar = new javax.swing.JButton();
+        botonCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         etiquetaTitulo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        etiquetaTitulo.setText("Registrando Fustbolista");
+        etiquetaTitulo.setText("Registrando Karateka");
         jPanel1.add(etiquetaTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         etiquetaIdentificacion.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         etiquetaIdentificacion.setText("Identificación");
         jPanel1.add(etiquetaIdentificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
+
+        botonAtras.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        botonAtras.setText("Atras");
+        botonAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonAtrasActionPerformed(evt);
+            }
+        });
+        jPanel1.add(botonAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, 90, 30));
 
         cajaIdentificacion.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jPanel1.add(cajaIdentificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 380, -1));
@@ -92,19 +101,19 @@ public class VentanaBasketbolista extends javax.swing.JFrame {
         etiquetaEdad.setText("Edad");
         jPanel1.add(etiquetaEdad, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 160, -1, -1));
 
+        etiquetaEstatura.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        etiquetaEstatura.setText("Estatura");
+        jPanel1.add(etiquetaEstatura, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, -1));
+
+        cajaEstatura.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jPanel1.add(cajaEstatura, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 120, -1));
+
         cajaPeso.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jPanel1.add(cajaPeso, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 240, 120, -1));
 
         etiquetaPeso.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         etiquetaPeso.setText("Peso");
         jPanel1.add(etiquetaPeso, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, -1, -1));
-
-        cajaEstatura.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jPanel1.add(cajaEstatura, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 120, -1));
-
-        etiquetaEstatura.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        etiquetaEstatura.setText("Estatura");
-        jPanel1.add(etiquetaEstatura, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, -1));
 
         comboTipo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         comboTipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tipo", "O-", "O+", "A-", "A+", "B-", "B+", "AB-", "AB+" }));
@@ -121,28 +130,19 @@ public class VentanaBasketbolista extends javax.swing.JFrame {
         cajaPromedio.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jPanel1.add(cajaPromedio, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 380, -1));
 
-        botonAtras.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        botonAtras.setText("Atras");
-        botonAtras.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAtrasActionPerformed(evt);
-            }
-        });
-        jPanel1.add(botonAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, 90, 30));
+        botonGuardar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        botonGuardar.setText("Guardar");
+        jPanel1.add(botonGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, -1, 30));
 
         botonCancelar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         botonCancelar.setText("Cancelar");
         jPanel1.add(botonCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 340, -1, 30));
 
-        botonGuardar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        botonGuardar.setText("Guardar");
-        jPanel1.add(botonGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, -1, 30));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -176,20 +176,20 @@ public class VentanaBasketbolista extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VentanaBasketbolista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaKarateka.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VentanaBasketbolista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaKarateka.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VentanaBasketbolista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaKarateka.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VentanaBasketbolista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaKarateka.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new VentanaBasketbolista().setVisible(true);
+                new VentanaKarateka().setVisible(true);
             }
         });
     }

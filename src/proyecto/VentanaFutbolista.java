@@ -20,7 +20,7 @@ public class VentanaFutbolista extends javax.swing.JFrame {
         initComponents();
         
         this.setLocationRelativeTo(null);
-        this.setMinimumSize(new Dimension(400, 315));
+        this.setMinimumSize(new Dimension(400, 380));
 
     }
 
